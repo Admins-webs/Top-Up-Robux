@@ -17,7 +17,7 @@
   </style>
  </head>
  <body class="bg-gray-100 text-gray-800">
-  <!-- Navbar -->
+  
   <nav class="bg-white shadow-lg">
    <div class="max-w-6xl mx-auto px-4">
     <div class="flex justify-between">
@@ -45,7 +45,7 @@
     </div>
    </div>
   </nav>
-  <!-- Hero Section -->
+
   <div class="bg-green-500 text-white py-20">
    <div class="max-w-6xl mx-auto text-center">
     <h1 class="text-4xl font-bold mb-4">
@@ -56,7 +56,7 @@
     </p>
    </div>
   </div>
-  <!-- Packages Section -->
+
   <div class="max-w-6xl mx-auto py-12">
    <h2 class="text-2xl font-bold text-center mb-8">
     Pilih Paket Robux
@@ -119,7 +119,7 @@
     </div>
    </div>
   </div>
-  <!-- Purchase Form Section -->
+
   <div class="bg-gray-200 py-12">
    <div class="max-w-6xl mx-auto">
     <h2 class="text-2xl font-bold text-center mb-8">
@@ -197,7 +197,7 @@
     </form>
    </div>
   </div>
-  <!-- Order Status Section -->
+
   <div class="max-w-6xl mx-auto py-12" id="cek-pesanan">
    <h2 class="text-2xl font-bold text-center mb-8">
     Cek Status Pesanan
@@ -214,7 +214,7 @@
     </button>
    </form>
   </div>
-  <!-- Contact Section -->
+
   <div class="bg-gray-200 py-12" id="kontak">
    <div class="max-w-6xl mx-auto">
     <h2 class="text-2xl font-bold text-center mb-8">
@@ -251,7 +251,7 @@
     </div>
    </div>
   </div>
-  <!-- Footer -->
+
   <footer class="bg-white py-6">
    <div class="max-w-6xl mx-auto text-center">
     <p class="text-gray-700">
@@ -279,15 +279,15 @@
 
   jumlahSelect.addEventListener("change", updateHarga);
 
-  // Inisialisasi harga pertama kali saat halaman dimuat
+
   window.addEventListener("DOMContentLoaded", updateHarga);
   
-   // Function untuk generate ID pesanan acak
+   
     function generateOrderID() {
         return 'RBX-' + Math.floor(1000 + Math.random() * 9000);
     }
 
-    // Handle kirim pesanan
+
     const orderForm = document.querySelector("form");
     orderForm?.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -320,7 +320,7 @@
         orderForm.reset();
     });
 
-    // Handle cek status pesanan
+
     const cekForm = document.querySelector("#cek-pesanan form");
     cekForm?.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -332,7 +332,7 @@
         const container = cekForm.parentElement;
         container.querySelectorAll(".status-box").forEach(el => el.remove());
 
-        // Simulasi loading
+
         statusBox.textContent = "Mengecek pesanan...";
         statusBox.classList.add("text-gray-500", "status-box");
         container.appendChild(statusBox);
